@@ -31,7 +31,7 @@ const SingleForum = () => {
 
         // NOTE: FETCHING THE POSTS FROM THE SERVER
         const fetchPosts = async () => {
-            const response = await fetch('/community/:id/posts')
+            const response = await fetch('https://ipd-hosting-backend.onrender.com/community/:id/posts')
             const json = await response.json()
             const params = window.location.href
             var jsonObject = []
