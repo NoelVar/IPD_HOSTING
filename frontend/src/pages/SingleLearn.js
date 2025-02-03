@@ -7,7 +7,7 @@ const SingleLearn = () => {
     useEffect(() => {
         // NOTE: FETCHING THE LEARNING MATERIAL FROM THE SERVER
         const fetchLearn = async () => {
-            const response = await fetch('/learn')
+            const response = await fetch('https://ipd-hosting-backend.onrender.com/learn')
             const json = await response.json()
 
             if (response.ok) {

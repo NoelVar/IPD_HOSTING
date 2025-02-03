@@ -11,7 +11,7 @@ const SingleForum = () => {
     useEffect(() => {
         // NOTE: FETCHING THE FORUM GROUP FROM THE SERVER
         const fetchForumGroup = async () => {
-            const response = await fetch('/community')
+            const response = await fetch('https://ipd-hosting-backend.onrender.com/community')
             const json = await response.json()
 
             if (response.ok) {

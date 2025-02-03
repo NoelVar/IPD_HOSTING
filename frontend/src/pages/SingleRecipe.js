@@ -8,7 +8,7 @@ const SingleRecipe = () => {
     useEffect(() => {
         // NOTE: FETCHING THE RECIPE FROM THE SERVER
         const fetchRecipe = async () => {
-            const response = await fetch('/recipes')
+            const response = await fetch('https://ipd-hosting-backend.onrender.com/recipes')
             const json = await response.json()
             const params = window.location.href
     

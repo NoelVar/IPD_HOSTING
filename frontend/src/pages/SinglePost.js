@@ -7,7 +7,7 @@ const SinglePost = () => {
     useEffect(() => {
         // NOTE: FETCHING THE POST FROM THE SERVER
         const fetchPost = async () => {
-            const response = await fetch('/community/:id/posts/')
+            const response = await fetch('https://ipd-hosting-backend.onrender.com/community/:id/posts/')
             const json = await response.json()
             const params = window.location.href
     

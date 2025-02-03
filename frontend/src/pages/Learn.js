@@ -9,7 +9,7 @@ const Learn = () => {
     // NOTE: FETCHING THE MATERIALS FROM THE SERVER
     useEffect(() => {
         const fetchLearns = async () => {
-            const response = await fetch('/learn')
+            const response = await fetch('https://ipd-hosting-backend.onrender.com/learn')
             const json = await response.json()
 
             if (response.ok) {

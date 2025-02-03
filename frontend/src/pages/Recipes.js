@@ -12,7 +12,7 @@ const Recipes = () => {
     // NOTE: FETCHING THE RECIPES FROM THE SERVER
     useEffect(() => {
         const fetchRecipes = async () => {
-            const response = await fetch('/recipes')
+            const response = await fetch('https://ipd-hosting-backend.onrender.com/recipes')
             const json = await response.json()
 
             if (response.ok) {

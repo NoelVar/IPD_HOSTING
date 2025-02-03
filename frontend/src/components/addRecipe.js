@@ -28,7 +28,7 @@ const AddRecipe = () => {
         const recipe = {title, prepTime, cookingTime, difficulty, serving, cusine, prepInstruction, cookInstructions, ingredients}
         
         // NOTE: SENDING THE RECIPE TO THE SERVER
-        const response = await fetch('/recipes', {
+        const response = await fetch('https://ipd-hosting-backend.onrender.com/recipes', {
             method: 'POST',
             body: JSON.stringify(recipe),
             headers: {

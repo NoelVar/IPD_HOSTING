@@ -32,7 +32,7 @@ const AddPost = () => {
         const post = {postTitle, postDescription, postMedia, posterName, group}
         
         // NOTE: SENDING THE POST TO THE SERVER
-        const response = await fetch('/community/:id/posts', {
+        const response = await fetch('https://ipd-hosting-backend.onrender.com/community/:id/posts', {
             method: 'POST',
             body: JSON.stringify(post),
             headers: {
