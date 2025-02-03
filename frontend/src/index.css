@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&family=Tilt+Warp&display=swap');
+
+/*NOTE: SETTING VARIABLES*/
+:root {
+  --primary-color: #D54751;
+  --secondary-color: #EF9A48;
+  --error: #CF0A0A;
+  --color3: #4DA394;
+  --background-color: #FFFCC7;
+  --color5: #59322B;
+  --black: rgba(0, 0, 0, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*NOTE: BASIC STYLING*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  font-family: "Khula", serif;
+}
+
+/*NOTE: STYLING NAVIGATION*/
+header .container {
+  position: fixed;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1;
+  transition: .2s ease;
+}
+
+header .logo {
+  font-size: 1.2em;
+  color: var(--primary-color);
+  display: flex;
+  margin: 0 4rem;
+  height: 5rem;
+}
+
+header a {
+  color: white;
+  text-shadow: 2px 2px 5px black, -2px -2px 5px black, -2px 2px 5px black, -2px 2px 5px black;
+  font-size: .6em;
+  margin: 0 20px;
+  transition: .2s ease;
+}
+
+header a:hover {
+  color: var(--color3);
+  transform: scale(1.1);
+  transition: .2s ease;
+}
+
+/*NOTE: STYLING HOME PAGE*/
+.home {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 100px;
+}
+
+/*NOTE: ADDING 3D PERSPECIVE EFFECT USING PARALLAX*/
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.parallax-layers {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  filter: blur(4px);
+}
+
+
+.parallax2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  transform-style: preserve-3d;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--color3);
+}
+
+.parallax3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  transform-style: preserve-3d;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--color5);
+}
+
+.parallax-layers2 {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  z-index: -2;
+}
+
+.image1 {
+  background-image: url('https://i.pinimg.com/736x/5f/f9/46/5ff946705a7ca6253eb7c74e119c4df1.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 20px;
+  transform: translateZ(-80px) scale(8);
+}
+.image2 {
+  background-image: url('https://i.pinimg.com/236x/e7/2f/a0/e72fa09334aa6cd91ce7a07e99fafedb.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: -15rem;
+  transform: translateZ(-80px) scale(4) rotate(-5deg);
+  border: 5px solid black;
+}
+.image3 {
+  background-image: url('https://i.pinimg.com/236x/de/20/88/de2088acd6c10da840eaf53870c85d16.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(-30px) scale(3) rotate(20deg);
+  border: 5px solid black;
+}
+
+.text1 {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://img.pikbest.com/png-images/20191010/retro-cartoon-english-pop-style-dialog-speech-bubble_2522830.png!sw800');
+  background-repeat: repeat;
+  background-size: 100px;
+  transform: translateZ(-80px) scale(10) rotate(45deg);
+}
+
+
+.message {
+  font-size: 4rem;
+  color: var(--background-color);
+  text-shadow: 2px 2px 5px black, -2px -2px 5px black, -2px 2px 5px black, -2px 2px 5px black;
+}
+
+.layer1 {
+  background: linear-gradient(
+    45deg,
+    var(--black) 25%,
+    transparent 25%,
+    transparent 75%,
+    var(--black) 75%
+  ),
+  linear-gradient(
+    -45deg,
+    var(--black) 25%,
+    transparent 25%,
+    transparent 75%,
+    var(--black) 75%
+  );
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  transform: translateZ(-100px) scale(2);
+}
+.layer2 {
+  top: 20rem;
+  left: 80rem;
+  transform: translateZ(-62px) scale(1);
+}
+.layer3 {
+  top: 15rem;
+  transform: translateZ(-40px) scale(0.5);
+}
+.layer4 {
+  right: 20rem;
+  bottom: 5rem;
+  transform: translateZ(-25px) scale(0.6);
+}
+.layer5 {
+  left: 50rem;
+  bottom: 20rem;
+  transform: translateZ(-80px) scale(1);
+}
+.layer6 {
+  right: 30rem;
+  top: 20rem;
+  transform: translateZ(-50px) scale(.4);
+}
+
+.title {
+  font-size: 4rem;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 5px black, -2px -2px 5px black, -2px 2px 5px black, -2px 2px 5px black;
+}
+
+
+/*NOTE: STYLING NON 3D EFFECT COMPONENTS*/
+.home-container {
+  background-color: var(--background-color);
+  padding: 3rem 5rem;
+  text-align: justify;
+}
+
+.home-container h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.section-button {
+  margin-top: 2rem;
+  padding: 8px;
+  background-color: var(--color3);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: .2s ease;
+}
+
+.section-button:hover {
+  transition: .2s ease;
+  box-shadow: 2px 2px 5px var(--black);
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+
+/*NOTE: STYLING RECIPE PAGE*/
+.recipe-container {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search {
+  margin: 5rem auto 20px auto;
+}
+
+.search input {
+  padding: 15px;
+  width: 60vw;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px var(--black);
+}
+
+#search-field {
+  background-color: white;
+  font-size: 1em;
+}
+
+.search-button {
+  padding:  8px 15px;
+  margin-left: 20px;
+  background-color: var(--color3);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;  
+  box-shadow: 2px 2px 5px var(--black);
+}
+
+.recipes-page {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    black 25%,
+    transparent 25%,
+    transparent 75%,
+    black 75%
+  ),
+  linear-gradient(
+    -45deg,
+    black 25%,
+    transparent 25%,
+    transparent 75%,
+    black 75%
+  );
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  padding: 5px;
+  margin: 0 100px;
+  box-shadow: 2px 2px 5px var(--black);
+  border: 2px solid var(--color5);
+  border-radius: 15px;
+}
+
+.recipes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.recipe-details {
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 20px;  
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  height: 200px;
+  width: 200px;
+  overflow: scroll;
+  transition: .2s ease;
+}
+
+.recipe-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary-color)
+}
+
+.recipe-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555
+}
+
+.recipe-details button {
+  padding: 5px;
+  background-color: var(--color3);
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.ingredient-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  column-gap: 10px;
+  font-size: 12px;
+}
+
+.single-ingredient {
+  background-color: #d8d8d8;
+  padding: 2px;
+  border-radius: 8px;
+  border: 1px solid #555;
+}
+
+.create {
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 5px;
+  overflow: scroll;
+  background-color: #d3cac3;
+}
+
+.create label, input {
+  display: box;
+}
+
+.create input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.create buttom {
+  background-color: var(--primary-color);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div.error {
+  padding: 10px;
+  background-color: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/*Learn PAGE*/
+.learn-page {
+  background-color: var(--background-color);
+}
+
+.learns {
+  padding-top: 5rem
+}
+
+.id-link {
+  text-decoration: none;
+  color: initial;
+}
+
+.single-unit-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+  margin: 5rem 2rem;
+}
+
+.single-unit-details img {
+  margin: auto;
+  width: 50%;
+  height: 50vh;
+}
+
+.single-unit-details button {
+  width: 5rem;
+  height: 2rem;
+  margin: auto;
+}
+
+.learns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.learn-details {
+  background-color: #fff;
+  border-radius: 4px;
+  margin: auto;
+  padding: 20px;  
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  height: 300px;
+  width: 80%;
+  overflow: hidden;
+  transition: .2s ease;
+}
+
+.learn-details:hover {
+  transform: scale(1.02);
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.learn-details h4 {
+  color: var(--primary);
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.learn-details img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/*community PAGE*/
+.groups { 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.group-details {
+  background-color: #fff;
+  border-radius: 4px;
+  margin: auto;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);  
+  width: 90%;
+  overflow: hidden;
+  transition: .2s ease;
+}
+
+.group-details:hover {
+  transform: scale(1.02);
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.group-details h4 {
+  color: var(--primary);
+  font-size: 1.2em;
+}
+
+.group-details img {
+  margin-right: 10px;
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+}
+
+.single-forum-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: justify;
+}
+
+.posts {
+  background-color: #a5a5a5;
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: .2s ease;
+}
+
+.posts .username {
+  color: var(--primary);
+  font-weight: bold;
+  margin: 2px 0px 10px 0px;
+}
+
+.posts img {
+  width: 100%;
+  height: 20rem;
+}
+
+.posts:hover {
+  transform: scale(1.01);
+  border: 2px solid var(--primary);
+  box-shadow: none;
+  transition: .2s ease;
+}
+
+.add-post {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 5rem auto;
+  background-color: #d3cac3;
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.add-post h3 {
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.add-post label {
+  font-weight: bold;
+}
+
+.add-post input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.add-post button {
+  width: 10rem;
+  margin: auto;
+}
+
+.forum-group-page, .forum, .single-post {
+  padding-top: 5rem;
+  background-color: var(--background-color);
+}
+
+.post-details {
+  padding: 1rem;
+  width: 70%;
+  background-color: white;
+  margin: auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 5px;
+}
+
+.single-post .username {
+  font-weight: bold;
+}
+
+.single-post h4 {
+  font-size: 1.4em;
+}
+
+.single-post img {
+  width: 500px;
+  height: 500px;
+}
+
+
