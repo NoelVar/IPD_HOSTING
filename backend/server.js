@@ -11,7 +11,7 @@ const postRoutes = require('./routes/posts')
 // NOTE: EXPRESS APP STORED IN THE APP CONSTANT
 const app = express()
 app.use(cors({
-    origin: "http://localhost:3000", // Update with your frontend URL
+    origin: "https://ipd-hosting-frontend.onrender.com", // Update with your frontend URL
     credentials: true
 }))
 
